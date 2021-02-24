@@ -10,7 +10,7 @@ namespace ToDoList
       Console.WriteLine("Welcome to the To Do List");
       Console.WriteLine("Would you like to add an item to your list or view your list (Add/View)");
       string userInput1 = (Console.ReadLine()).ToLower();
-      Item testItem = new Item("Walk the Dog");
+      // Item testItem = new Item("Walk the Dog");
       if (userInput1 == "add")
       {
         Add();
@@ -29,6 +29,7 @@ namespace ToDoList
         string itemToAdd = Console.ReadLine();
         Item addedItem = new Item(itemToAdd);
         Console.WriteLine(itemToAdd + " has been added to your list.");
+        Repeat();
     }
     public static void Repeat()
     {
@@ -50,6 +51,7 @@ namespace ToDoList
       {
         Console.WriteLine(element.Description);
       }
+      Repeat();
     }
   }
 }
